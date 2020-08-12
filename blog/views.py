@@ -27,14 +27,15 @@ posts=[
 def home(request):
     context={
         'posts':posts,
+        'title':'Home'
     }
     return render(request,'blog/home.html',context)
 
 def about(request):
-    return HttpResponse('<h1>About</h1>')
+    return render(request,'blog/about.html',{'title':'About'})
 
 def gallery(request):
-    return HttpResponse('<h1>Gallery</h1>')
+    return render(request,'blog/contact.html',{'title':'Contact'})
 
 def contact(request):
-    return HttpResponse('<h1>Contact</h1>')
+    return render(request,'blog/contact.html',{'title':'Contact'})
